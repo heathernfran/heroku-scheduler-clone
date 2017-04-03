@@ -1,10 +1,13 @@
 <template>
   <div id="scheduler">
     <h1>{{ scheduler }}</h1>
+    <div class="">
+      {{ jobModel }}
+    </div>
     <div v-if="showForm">
-      <form class="" action="index.html" method="post">
-        <input v-model="testModel" type="text" name="" value="">
-        <button v-on:click="postJob" type="button" name="button">Save</button>
+      <form class="" action="/" method="post">
+        <input v-model="jobModel" type="text" name="" value="">
+        <!-- <button v-on:click="postJob" type="button" name="button">Save</button> -->
       </form>
     </div>
     <div v-else>
@@ -20,8 +23,11 @@ export default {
   data() {
     return {
       scheduler: 'Heroku Scheduler Clone',
-      showForm: false
+      showForm: false,
     };
+  },
+  methods: {
+    postJob: function(event) {}
   }
 };
 </script>
