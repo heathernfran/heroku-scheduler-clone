@@ -7,15 +7,16 @@
       Job: {{ job }}
     </div>
     <div v-if="showForm">
+      <!-- Get user input for adding jobs -->
       <input v-model="jobModel" type="text">
       <button v-on:click="postJob(jobModel)">Save</button>
+      <button v-on:click="showForm = false">Cancel</button>
     </div>
     <div v-else>
-      <h2>Click to add job</h2>
+      <!-- Toggle between showing input fields,
+      when true the input field section is shown -->
+      <button v-on:click="showForm = !showForm">Add new job</button>
     </div>
-    <!-- Toggle between showing input fields,
-    when true the input field section is shown -->
-    <button v-on:click="showForm = !showForm">Add new job</button>
   </div>
 </template>
 
