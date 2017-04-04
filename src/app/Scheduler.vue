@@ -7,10 +7,7 @@
       <strong>Job:</strong> {{ job }}
     </div>
     <div v-if="showForm">
-      <!-- Get user input for adding jobs -->
-      <input v-model="jobModel" type="text">
-      <button v-on:click="postJob(jobModel)">Save</button>
-      <button v-on:click="showForm = false">Cancel</button>
+      <job-form-component></job-form-component>
     </div>
     <div v-else>
       <!-- Toggle between showing input fields,
@@ -21,8 +18,13 @@
 </template>
 
 <script>
+import JobForm from './JobForm.vue';
+
 export default {
   name: 'Scheduler',
+  components: {
+    'job-form-component': JobForm
+  },
   data() {
     return {
       // Store user input for added jobs
