@@ -2,11 +2,11 @@
   <div id="scheduler">
     <h1>{{ scheduler }}</h1>
     <div v-for="job in jobsArray" class="">
-      Testing: {{ job }}
+      Job: {{ job }}
     </div>
     <div v-if="showForm">
       <input v-model="jobModel" type="text" name="" value="">
-      <button v-on:click="postJob" type="button" name="button">Save</button>
+      <button v-on:click="postJob(jobModel)" type="button" name="button">Save</button>
     </div>
     <div v-else>
       <h2>Click to add job</h2>
@@ -20,13 +20,15 @@ export default {
   name: 'Scheduler',
   data() {
     return {
-      jobsArray: ['first job', 'second job'],
+      jobsArray: [],
       scheduler: 'Heroku Scheduler Clone',
       showForm: false,
     };
   },
   methods: {
-    postJob: function(event) {}
+    postJob: function(jobModel) {
+      this.jobsArray.push(jobModel)
+    }
   }
 };
 </script>
