@@ -1,8 +1,9 @@
 <template>
   <div id="scheduler">
     <h1>{{ scheduler }}</h1>
-    <!-- Output all jobs in the array, as user adds more jobs -->
-    <div v-for="job in jobsArray">
+    <!-- Output all jobs in the array, as user adds more jobs.
+    Update jobs by editing text directly. -->
+    <div v-for="job in jobsArray" contenteditable="true">
       Job: {{ job }}
     </div>
     <div v-if="showForm">
