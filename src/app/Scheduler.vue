@@ -4,7 +4,7 @@
     <!-- Output all jobs in the array, as user adds more jobs.
     Update jobs by editing text directly. -->
     <div v-for="job in jobsArray" contenteditable="true">
-      Job: {{ job }}
+      <strong>Job:</strong> {{ job }}
     </div>
     <div v-if="showForm">
       <!-- Get user input for adding jobs -->
