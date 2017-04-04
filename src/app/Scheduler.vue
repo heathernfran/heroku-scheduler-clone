@@ -21,7 +21,7 @@
 <script>
 export default {
   name: 'Scheduler',
-  data: {
+  data() {
     return {
       // Store user input for added jobs
       jobsArray: [],
