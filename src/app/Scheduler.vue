@@ -40,6 +40,7 @@ export default {
     // Add job from input field
     postJob: function(jobModel) {
       this.jobsArray.push(jobModel)
+      this.jobModel = ''
     }
   }
 };
