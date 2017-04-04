@@ -23,12 +23,12 @@
 <script>
 export default {
   name: 'Scheduler',
+  // Store user input for added jobs
+  // Default to false, for hiding input field
   data() {
     return {
-      // Store user input for added jobs
       jobsArray: [],
       scheduler: 'Heroku Scheduler Clone',
-      // Default to false, for hiding input field
       showForm: false,
     };
   },
