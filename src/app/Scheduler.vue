@@ -5,10 +5,8 @@
       {{ jobModel }}
     </div>
     <div v-if="showForm">
-      <form class="" action="/" method="post">
-        <input v-model="jobModel" type="text" name="" value="">
-        <!-- <button v-on:click="postJob" type="button" name="button">Save</button> -->
-      </form>
+      <input v-model="jobModel" type="text" name="" value="">
+      <button v-on:click="postJob" type="button" name="button">Save</button>
     </div>
     <div v-else>
       <h2>Click to add job</h2>
