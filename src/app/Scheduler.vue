@@ -14,7 +14,7 @@
     </div>
     <!-- Toggle between showing input fields,
     when true the input field section is shown -->
-    <button v-on:click="toggleForm">Add new job</button>
+    <button v-on:click="showForm = !showForm">Add new job</button>
   </div>
 </template>
 
@@ -31,9 +31,10 @@ export default {
     };
   },
   methods: {
+    // Determine whether to show user input section
     toggleForm: function() {
-      showForm = !showForm
-    }
+      showForm = !showForm;
+    },
     // Add job from input field
     postJob: function(jobModel) {
       this.jobsArray.push(jobModel)
